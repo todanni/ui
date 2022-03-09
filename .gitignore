@@ -21,11 +21,8 @@ yarn-debug.log*
 yarn-error.log*
 /.eslintcache
 
+# IDE settings
+.idea
 
-/.idea/.gitignore
-/.idea/frontend.iml
-/.idea/inspectionProfiles/Project_Default.xml
-/.idea/modules.xml
-/.idea/vcs.xml
-
-firebase.config.json
+# Firebase credentials
+src/firebase.config.js
