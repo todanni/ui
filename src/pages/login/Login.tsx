@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
-import "./Login.css";
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import './Login.css';
 import { auth, signInWithGoogle } from '../../firebase';
-import GoogleButton from 'react-google-button'
+import GoogleButton from 'react-google-button';
 
 function Login() {
-	const [user, loading, error] = useAuthState(auth);
+	const [user, loading] = useAuthState(auth);
 	const navigate = useNavigate();
 
 	useEffect(() => {
@@ -14,12 +14,12 @@ function Login() {
 			// maybe trigger a loading screen
 			return;
 		}
-		if (user) navigate("/tasks");
-	}, [user, loading]);
+		if (user) navigate('/tasks');
+	}, [user, loading, navigate]);
 	return (
-		<div className="login">
-			<div className="login__container">
-				<GoogleButton onClick={signInWithGoogle}/>
+		<div className='login'>
+			<div className='login__container'>
+				<GoogleButton onClick={signInWithGoogle} />
 			</div>
 		</div>
 	);
