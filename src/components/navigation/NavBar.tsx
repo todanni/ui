@@ -1,4 +1,4 @@
-import { AppBar, Avatar, Button } from '@mui/material';
+import { AppBar, Avatar, Button, Popover } from '@mui/material';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth, logout, signInWithGoogle } from '../../firebase';
 import { makeStyles } from '@mui/styles';
@@ -63,7 +63,7 @@ export default function NavBar() {
 							color='inherit'>
 							<Avatar alt={user?.displayName!} src={user?.photoURL!} />
 						</IconButton>
-						<Menu
+						<Popover
 							id='menu-appbar'
 							anchorEl={anchorEl}
 							anchorOrigin={{
@@ -72,14 +72,14 @@ export default function NavBar() {
 							}}
 							keepMounted
 							transformOrigin={{
-								vertical: 'bottom',
+								vertical: 'top',
 								horizontal: 'right',
 							}}
 							open={Boolean(anchorEl)}
 							onClose={handleClose}>
 							<MenuItem onClick={handleClose}>Profile</MenuItem>
 							<MenuItem onClick={logout}>Log out</MenuItem>
-						</Menu>
+						</Popover>
 					</div>
 				)}
 

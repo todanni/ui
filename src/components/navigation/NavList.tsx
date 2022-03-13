@@ -40,7 +40,6 @@ export default function NavList() {
 			{navigationItems.map((item) => (
 				<ListItem button key={item.key} component={Link} to={item.to}>
 					<ListItemIcon>{item.icon}</ListItemIcon>
-					{/*<ListItemText primary={item.key} />*/}
 				</ListItem>
 			))}
 		</FireNav>

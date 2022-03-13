@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import '../App.css';
 import { Box, CircularProgress, CssBaseline, Typography } from '@mui/material';
 import { Route, Routes } from 'react-router-dom';
-import Tasks from '../pages/tasks/Tasks';
+import TaskDashboard from '../pages/tasks/TaskDashboard';
 import Login from '../pages/login/Login';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
@@ -30,7 +30,8 @@ function App() {
 			<Box component='main' sx={{ flexGrow: 1, p: 3, mt: '50px', ml: '50px' }}>
 				<Routes>
 					<Route path='/' element={<Login />} />
-					<Route path='/tasks' element={<Tasks />} />
+					<Route path='/tasks' element={<TaskDashboard />} />
+					<Route path='/project/:prj' element={<TaskDashboard />} />
 				</Routes>
 			</Box>
 		</Box>
