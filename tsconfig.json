@@ -17,6 +17,8 @@
     "incremental": true,
     "noUncheckedIndexedAccess": true,
     "baseUrl": ".",
+    "composite": true,
+    "declarationDir": "types",
     "paths": {
       "~/*": ["./src/*"]
     }
