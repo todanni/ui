@@ -36,7 +36,7 @@ export default {
     terser(),
     postcss({
       config: {
-        path: "./postcss.config.ts",
+        path: "./postcss.config.cjs",
       },
       extensions: [".css"],
       minimize: true,

@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es2017",
+    "declaration": true,
+    "declarationDir": "build",
+    "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "checkJs": true,
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -13,23 +14,28 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react",
     "incremental": true,
-    "noUncheckedIndexedAccess": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
-    "composite": true,
-    "declarationDir": "types",
     "paths": {
       "~/*": ["./src/*"]
     }
   },
   "include": [
-    ".eslintrc.cjs",
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.cjs",
-    "**/*.mjs"
+    "src/components/**/*.ts",
+    "src/components/**/*.tsx",
+    ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",
+    "build",
+    "src/**/*.stories.tsx",
+    "src/**/*.test.tsx"
+  ]
 }
