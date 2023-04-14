@@ -34,4 +34,4 @@ const Button: React.FC<ButtonProps> = ({
   <button className={button({ intent, size, className })} {...props}></button>
 );
 
-export { Button, button };
+export { Button };
