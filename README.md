@@ -1,28 +1,75 @@
-# Create T3 App
+<!-- MARKDOWN LINKS & IMAGES -->
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+[repo-url]: https://github.com/todanni/components
 
-## What's next? How do I make an app with this?
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/todanni">
+    <img src="https://i.imgur.com/HrJnOou.png" alt="Logo">
+  </a>
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+  <p align="center">
+    The ToDanni UI Components Library 
+    <br />
+    <a href="https://finance-planner-todanni.vercel.app/"><strong>Explore the demo »</strong></a>
+    <br />
+    <br />
+    <a href="https://discord.gg/Q7yU6zqBcG">Join Discussions</a>
+    ·
+    <a href="https://github.com/toDanni/finance-planner/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/toDanni/finance-planner/issues">Request Feature</a>
+  </p>
+</p>
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Discord](https://img.shields.io/badge/Chat%20on-Discord-%235865f2)](https://discord.gg/Q7yU6zqBcG)
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+The ToDanni suite is a number of tools used to manage your every day life. This are all the UI components used by the applications.
+
+### Built With
+
 - [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+- [Storybook](https://storybook.js.org/)
+- [Class Variance Authority](https://cva.style/docs)
 
-## Learn More
+<!-- GETTING STARTED -->
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+## Getting Started
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+To get a local copy up and running follow these simple steps:
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+```shell
+git clone git@github.com:todanni/components.git
+cd components
+npm run storybook
+```
 
-## How do I deploy this?
+<!-- CONTRIBUTING -->
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feat/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feat/AmazingFeature`)
+5. Open a Pull Request
+
+<!-- Getting help -->
+
+## Getting help
+
+- [Join Discord community](https://discord.gg/Q7yU6zqBcG) – it is the easiest way to get help, all questions are usually answered immediately if within reasonable GMT times.
+
+<!-- LICENSE -->
+
+## License
+
+Distributed under the GNU General Public License v3.0. See `LICENSE` for more information.
