@@ -4,7 +4,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 const copyright = cva('text-center font-light', {
   variants: {
     intent: {
-      primary: ['dark:text-grey-0 text-grey-5'],
+      primary: ['dark:text-grey-0 text-grey-4'],
       secondary: ['dark:text-white text-grey-0'],
     },
     size: {

@@ -52,12 +52,14 @@ const FooterLinks: React.FC = () => {
     <div className="hidden flex-row justify-around gap-10 sm:flex">
       {footerLinks.map((footerlink) => (
         <div key={footerlink.title} className={`flex flex-col`}>
-          <h4 className="font-medium text-white">{footerlink.title}</h4>
+          <h4 className="font-medium text-grey-5 dark:text-white">
+            {footerlink.title}
+          </h4>
           <ul className="mt-4 list-none">
             {footerlink.links.map((link, index) => (
               <li
                 key={link.name}
-                className={`hover:text-secondary cursor-pointer font-light leading-[24px] text-grey-0 ${
+                className={`hover:text-secondary cursor-pointer font-light leading-[24px] text-grey-3 dark:text-grey-0 ${
                   index !== footerlink.links.length - 1 ? 'mb-4' : 'mb-0'
                 }`}
               >

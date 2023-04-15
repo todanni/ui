@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           <FooterCredits />
           <FooterLinks />
         </div>
-        <div className="flex justify-center border-t-[1px] border-t-grey-5 pt-4 sm:justify-between">
+        <div className="flex justify-center border-t-[1px] border-t-grey-2 pt-4 dark:border-t-grey-5 sm:justify-between">
           <div className="hidden w-full sm:flex">
             <FooterCopyright />
           </div>
