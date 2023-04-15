@@ -1,8 +1,5 @@
-<!-- MARKDOWN LINKS & IMAGES -->
-
 [repo-url]: https://github.com/todanni/components
 
-<!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/todanni">
@@ -26,8 +23,6 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Discord](https://img.shields.io/badge/Chat%20on-Discord-%235865f2)](https://discord.gg/Q7yU6zqBcG)
 
-<!-- ABOUT THE PROJECT -->
-
 ## About The Project
 
 The ToDanni suite is a number of tools used to manage your every day life. This are all the UI components used by the applications.
@@ -38,19 +33,16 @@ The ToDanni suite is a number of tools used to manage your every day life. This 
 - [Storybook](https://storybook.js.org/)
 - [Class Variance Authority](https://cva.style/docs)
 
-<!-- GETTING STARTED -->
-
 ## Getting Started
 
 To get a local copy up and running follow these simple steps:
 
 ```shell
-git clone git@github.com:todanni/components.git
+git clone git@github.com:todanni/ui.git
 cd components
+npm i
 npm run storybook
 ```
-
-<!-- CONTRIBUTING -->
 
 ## Contributing
 
@@ -62,13 +54,9 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feat/AmazingFeature`)
 5. Open a Pull Request
 
-<!-- Getting help -->
-
 ## Getting help
 
 - [Join Discord community](https://discord.gg/Q7yU6zqBcG) – it is the easiest way to get help, all questions are usually answered immediately if within reasonable GMT times.
-
-<!-- LICENSE -->
 
 ## License
 
