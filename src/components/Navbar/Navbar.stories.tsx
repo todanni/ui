@@ -30,13 +30,32 @@ const navLinks = [
   },
 ];
 
-export const Primary: Story = {
+export const Logo: Story = {
   args: {
     links: navLinks,
     currentLocation: 'home',
-    logo: <div>Logo</div>,
+    variant: 'logo',
   },
-  render: ({ links, currentLocation }) => (
-    <Navbar links={links} currentLocation={currentLocation} logo={undefined} />
+  render: ({ links, currentLocation, variant }) => (
+    <Navbar links={links} currentLocation={currentLocation} variant={variant} />
+  ),
+};
+
+export const Title: Story = {
+  args: {
+    links: navLinks,
+    currentLocation: 'home',
+    variant: 'title',
+    firstWord: 'Finance',
+    secondWord: 'Planner',
+  },
+  render: ({ links, currentLocation, variant, firstWord, secondWord }) => (
+    <Navbar
+      links={links}
+      currentLocation={currentLocation}
+      variant={variant}
+      firstWord={firstWord}
+      secondWord={secondWord}
+    />
   ),
 };

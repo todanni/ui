@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { FooterLinks } from './FooterLinks';
 import React from 'react';
+import { SimpleFooter } from './SimpleFooter';
 
 const meta = {
-  title: 'Footer/Links',
-  component: FooterLinks,
-} satisfies Meta<typeof FooterLinks>;
+  title: 'Simple Footer',
+  component: SimpleFooter,
+} satisfies Meta<typeof SimpleFooter>;
 
 export default meta;
 
@@ -13,5 +13,5 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {},
-  render: ({}) => <FooterLinks />,
+  render: ({}) => <SimpleFooter />,
 };
