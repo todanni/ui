@@ -2,18 +2,13 @@ import React from 'react';
 import { Logo } from '../Logo';
 import { NavbarProps } from './Navbar';
 
-type LinkProps = {
-  location: string;
-  name: string;
-};
-
 const LogoNavbar: React.FC<NavbarProps> = ({
   links,
   currentLocation,
   ...props
 }) => {
   return (
-    <nav className="navbar flex flex-col items-center gap-4 sm:flex-row sm:items-baseline sm:justify-between">
+    <nav className="navbar flex flex-col items-center gap-4 sm:w-full sm:flex-row sm:items-baseline sm:justify-between">
       <div className="w-1/5">
         <Logo />
       </div>

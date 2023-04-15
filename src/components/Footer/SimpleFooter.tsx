@@ -5,7 +5,7 @@ import { FooterIcons } from './FooterIcons/FooterIcons';
 const SimpleFooter: React.FC = () => {
   return (
     <>
-      <footer className="flex justify-between border-t-[1px] border-t-grey-5 py-4">
+      <footer className="flex w-full justify-between border-t-[1px] border-t-grey-5 py-4">
         <FooterCopyright />
         <FooterIcons />
       </footer>

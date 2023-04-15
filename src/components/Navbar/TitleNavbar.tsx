@@ -10,8 +10,8 @@ const TitleNavbar: React.FC<NavbarProps> = ({
   ...props
 }) => {
   return (
-    <nav className="navbar flex flex-col items-center gap-4 sm:flex-row sm:items-baseline sm:justify-between">
-      <div className="flex w-1/5 gap-1">
+    <nav className="navbar flex flex-col items-center gap-4 sm:w-full sm:flex-row sm:items-baseline sm:justify-between">
+      <div className="flex gap-1 sm:w-1/5">
         <Title intent="gradient" size="large">
           {firstWord}
         </Title>

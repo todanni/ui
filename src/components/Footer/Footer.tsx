@@ -7,13 +7,13 @@ import { FooterLinks } from './FooterLinks/FooterLinks';
 const Footer: React.FC = () => {
   return (
     <>
-      <footer className="flex flex-col">
+      <footer className="flex w-full flex-col">
         <div className="my-4 flex sm:justify-between">
           <FooterCredits />
           <FooterLinks />
         </div>
         <div className="flex justify-center border-t-[1px] border-t-grey-5 pt-4 sm:justify-between">
-          <div className="hidden sm:flex">
+          <div className="hidden w-full sm:flex">
             <FooterCopyright />
           </div>
           <FooterIcons />

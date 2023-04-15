@@ -32,7 +32,7 @@ export const FooterIcons: React.FC<FooterIconsProps> = ({
   children,
   ...props
 }) => (
-  <div className="flex h-6 justify-center gap-4">
+  <div className="flex h-6 w-full justify-end gap-4">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 496 512"
