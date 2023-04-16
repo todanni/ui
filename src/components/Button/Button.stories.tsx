@@ -18,7 +18,7 @@ export const Primary: Story = {
   },
   render: ({ size, intent }) => (
     <Button size={size} intent={intent}>
-      Primary button
+      View demo
     </Button>
   ),
 };
