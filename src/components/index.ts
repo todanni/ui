@@ -10,3 +10,5 @@ export * from './typography/Paragraph';
 export * from './Footer/SimpleFooter';
 export * from './charts/DonutChart';
 export * from './charts/LineChart';
+export * from './typography/Heading';
+export * from './sections/Section';

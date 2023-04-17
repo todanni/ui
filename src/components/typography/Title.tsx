@@ -14,9 +14,9 @@ const title = cva(' font-extrabold tracking-tight', {
       ],
     },
     size: {
-      small: ['text-sm'],
-      medium: ['text-base'],
-      large: ['text-3xl'],
+      small: ['text-xl'],
+      medium: ['text-2xl'],
+      large: ['text-4xl'],
       xlarge: ['text-8xl'],
     },
   },

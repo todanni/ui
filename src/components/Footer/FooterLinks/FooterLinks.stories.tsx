@@ -3,7 +3,7 @@ import { FooterLinks } from './FooterLinks';
 import React from 'react';
 
 const meta = {
-  title: 'Footer/Links',
+  title: 'Footer/Components/Links',
   component: FooterLinks,
 } satisfies Meta<typeof FooterLinks>;
 

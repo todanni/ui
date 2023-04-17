@@ -3,7 +3,7 @@ import { Paragraph } from './Paragraph';
 import React from 'react';
 
 const meta = {
-  title: 'Paragraph',
+  title: 'Typography/Paragraph',
   component: Paragraph,
 } satisfies Meta<typeof Paragraph>;
 

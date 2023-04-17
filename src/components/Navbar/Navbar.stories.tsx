@@ -3,7 +3,7 @@ import { Navbar } from './Navbar';
 import React from 'react';
 
 const meta = {
-  title: 'Navbar',
+  title: 'Navbar/Navbar',
   component: Navbar,
 } satisfies Meta<typeof Navbar>;
 

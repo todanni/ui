@@ -3,7 +3,7 @@ import { Title } from './Title';
 import React from 'react';
 
 const meta = {
-  title: 'Title',
+  title: 'Typography/Title',
   component: Title,
 } satisfies Meta<typeof Title>;
 

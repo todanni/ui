@@ -3,7 +3,7 @@ import React from 'react';
 import { SimpleFooter } from './SimpleFooter';
 
 const meta = {
-  title: 'Simple Footer',
+  title: 'Footer/Simple',
   component: SimpleFooter,
 } satisfies Meta<typeof SimpleFooter>;
 
