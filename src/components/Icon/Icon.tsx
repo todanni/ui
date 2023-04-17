@@ -13,6 +13,7 @@ const icon = cva('', {
       primary: ['text-grey-6 dark:text-white'],
       secondary: ['text-green-4'],
       red: ['text-red-900'],
+      white: ['text-white'],
     },
     size: {
       small: ['h-8 w-8 p-1'],

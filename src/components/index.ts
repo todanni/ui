@@ -12,3 +12,4 @@ export * from './charts/DonutChart';
 export * from './charts/LineChart';
 export * from './typography/Heading';
 export * from './sections/Section';
+export * from './cards/PlanCard';
