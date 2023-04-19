@@ -3,9 +3,13 @@ import { cva, type VariantProps } from 'class-variance-authority';
 
 const heading = cva('', {
   variants: {
-    intent: {
-      accent: ['text-green-4'],
-      default: ['dark:text-white', 'text-grey-7'],
+    colour: {
+      default: ['dark:text-grey-5', 'text-grey-5'],
+      savings: ['dark:text-green-4 ', 'text-green-500/80'],
+      debt: ['dark:text-red-800', 'text-red-500/80'],
+      income: ['dark:text-blue-700', ' text-blue-500/80'],
+      spending: ['dark:text-spend-3', 'text-spend-5/80'],
+      white: ['text-white dark:text-white'],
     },
     size: {
       small: ['text-md'],
@@ -16,13 +20,13 @@ const heading = cva('', {
   },
   compoundVariants: [
     {
-      intent: 'default',
+      colour: 'default',
       size: 'small',
       class: 'dark:text-white/50 text-grey-7/50',
     },
   ],
   defaultVariants: {
-    intent: 'default',
+    colour: 'default',
     size: 'large',
   },
 });
@@ -33,7 +37,7 @@ export interface HeadingProps
 
 const Heading: React.FC<HeadingProps> = ({
   className,
-  intent,
+  colour,
   size,
   ...props
 }) => {
@@ -41,28 +45,28 @@ const Heading: React.FC<HeadingProps> = ({
     case 'large':
       return (
         <HeadingOne
-          className={heading({ intent, size, className })}
+          className={heading({ colour, size, className })}
           {...props}
         />
       );
     case 'medium':
       return (
         <HeadingTwo
-          className={heading({ intent, size, className })}
+          className={heading({ colour, size, className })}
           {...props}
         />
       );
     case 'small':
       return (
         <HeadingThree
-          className={heading({ intent, size, className })}
+          className={heading({ colour, size, className })}
           {...props}
         />
       );
     default:
       return (
         <HeadingOne
-          className={heading({ intent, size, className })}
+          className={heading({ colour, size, className })}
           {...props}
         />
       );
@@ -82,22 +86,3 @@ const HeadingThree: React.FC<HeadingProps> = ({ ...props }) => {
 };
 
 export { Heading };
-
-{
-  /* <div className="flex flex-col gap-2">
-  <Title size="large" intent="primary">
-    Start by creating a budget
-  </Title>
-  <h2 className="text-lg text-white">
-    Use the budget tool to visualise your obligatory spending
-  </h2>
-  <h3 className="text-md text-white/50">
-    The first step of taking control of your finances is to understand where
-    your money is going every month.
-  </h3>
-  <h3 className="text-md text-white/50">
-    The Finance Planner lets you categorise your spending and provides you with
-    a clear view of your monthly outgoings.
-  </h3>
-</div>; */
-}

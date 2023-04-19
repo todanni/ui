@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import { Icon } from './Icon';
+import { ContainedIcon } from './ContainedIcon';
 
 const meta = {
-  title: 'Icon/Default',
-  component: Icon,
-} satisfies Meta<typeof Icon>;
+  title: 'Icon/Contained',
+  component: ContainedIcon,
+} satisfies Meta<typeof ContainedIcon>;
 
 export default meta;
 
@@ -18,6 +18,6 @@ export const Primary: Story = {
     colour: 'default',
   },
   render: ({ size, object, colour }) => (
-    <Icon size={size} colour={colour} object={object} />
+    <ContainedIcon size={size} colour={colour} object={object} />
   ),
 };

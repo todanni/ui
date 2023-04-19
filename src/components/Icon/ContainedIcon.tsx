@@ -2,22 +2,20 @@ import React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { iconMap, IconObject } from './iconMapping';
 
-const icon = cva('', {
+const icon = cva('text-white rounded-xl', {
   variants: {
     colour: {
-      default: ['dark:text-grey-5', 'text-grey-5'],
-      savings: ['dark:text-green-4 ', 'text-green-500/80'],
-      debt: ['dark:text-red-800', 'text-red-500/80'],
-      income: ['dark:text-blue-700', ' text-blue-500/80'],
-      spending: ['dark:text-spend-3', 'text-spend-5/80'],
-      white: ['text-white dark:text-white'],
+      default: ['dark:bg-grey-5', 'bg-grey-5'],
+      savings: ['dark:bg-green-5 ', 'bg-green-500/80'],
+      debt: ['dark:bg-red-900', 'bg-red-500/80'],
+      income: ['dark:bg-blue-800', ' bg-blue-500/80'],
+      spending: ['dark:bg-spend-4', 'bg-spend-4/80'],
     },
     size: {
-      xs: ['h-6 w-6'],
-      small: ['h-8 w-8'],
-      medium: ['h-10 w-10'],
-      large: ['h-16 w-16'],
-      xlarge: ['h-20 w-20'],
+      small: ['h-8 w-8 p-1'],
+      medium: ['h-10 w-10 p-1'],
+      large: ['h-16 w-16 p-1'],
+      xlarge: ['h-20 w-20 p-2'],
     },
   },
   defaultVariants: {
@@ -26,13 +24,13 @@ const icon = cva('', {
   },
 });
 
-export interface IconProps
+export interface ContainedIconProps
   extends React.SVGAttributes<SVGElement>,
     VariantProps<typeof icon> {
   object: IconObject;
 }
 
-const Icon: React.FC<IconProps> = ({
+const ContainedIcon: React.FC<ContainedIconProps> = ({
   className,
   colour,
   size,
@@ -53,4 +51,4 @@ const Icon: React.FC<IconProps> = ({
   </svg>
 );
 
-export { Icon };
+export { ContainedIcon };

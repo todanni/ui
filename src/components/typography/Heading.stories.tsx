@@ -15,16 +15,16 @@ export const Headings: Story = {
   args: {},
   render: () => (
     <div>
-      <Heading size="xlarge" intent="accent">
+      <Heading size="xlarge" colour="savings">
         Budget section
       </Heading>
-      <Heading size="large" intent="accent">
+      <Heading size="large" colour="savings">
         Start by creating a budget
       </Heading>
-      <Heading size="medium" intent="default">
+      <Heading size="medium" colour="default">
         Use the budget tool to visualise your obligatory spending
       </Heading>
-      <Heading size="small" intent="default">
+      <Heading size="small" colour="default">
         The first step of taking control of your finances is to understand where
         your money is going every month.
       </Heading>

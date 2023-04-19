@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import { Icon } from './Icon';
+import { DualToneIcon } from './DualToneIcon';
 
 const meta = {
-  title: 'Icon/Default',
-  component: Icon,
-} satisfies Meta<typeof Icon>;
+  title: 'Icon/Dual Tone',
+  component: DualToneIcon,
+} satisfies Meta<typeof DualToneIcon>;
 
 export default meta;
 
@@ -18,6 +18,6 @@ export const Primary: Story = {
     colour: 'default',
   },
   render: ({ size, object, colour }) => (
-    <Icon size={size} colour={colour} object={object} />
+    <DualToneIcon size={size} colour={colour} object={object} />
   ),
 };
