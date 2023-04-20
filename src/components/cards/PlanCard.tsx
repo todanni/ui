@@ -46,9 +46,7 @@ type PaymentSource = {
 
 type CardContentsProps = {
   title: string;
-  icon: IconObject;
   totalPayments: number;
-
   sources?: PaymentSource[];
   totalBalance?: number;
   totalBalanceText?: string;
