@@ -15,6 +15,7 @@
   "author": "Danni Popova",
   "scripts": {
     "build": "rollup -c rollup.config.js --bundleConfigAsCjs",
+    "rebuild": "rollup -c rollup.config.js --bundleConfigAsCjs --watch",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
