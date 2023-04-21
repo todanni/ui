@@ -4,7 +4,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 const heading = cva('', {
   variants: {
     colour: {
-      default: ['dark:text-grey-5', 'text-grey-5'],
+      default: ['dark:text-white/80', 'text-grey-5'],
       savings: ['dark:text-green-4 ', 'text-green-500/80'],
       debt: ['dark:text-red-800', 'text-red-500/80'],
       income: ['dark:text-blue-700', ' text-blue-500/80'],
