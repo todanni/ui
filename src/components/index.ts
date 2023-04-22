@@ -15,3 +15,7 @@ export * from './sections/Section';
 export * from './typography/Heading';
 export * from './typography/Paragraph';
 export * from './typography/Title';
+export * from './inputs/InputHelpText';
+export * from './inputs/InputLabel';
+export * from './inputs/Select';
+export * from './inputs/TextInput';
