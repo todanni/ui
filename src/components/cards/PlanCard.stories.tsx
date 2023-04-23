@@ -16,7 +16,6 @@ export const All: Story = {
     contents: {
       title: 'Monthly income',
       totalPayments: 1234.56,
-      icon: 'money',
     },
   },
   render: ({ contents }) => (
@@ -39,7 +38,6 @@ export const Income: Story = {
         { name: 'Salary', amount: 1234.56 },
         { name: 'Other', amount: 234.56 },
       ],
-      icon: 'money',
     },
   },
   render: ({ section, contents }) => (
@@ -57,7 +55,6 @@ export const Spending: Story = {
         { name: 'Salary', amount: 1234.56 },
         { name: 'Other', amount: 234.56 },
       ],
-      icon: 'money',
     },
   },
   render: ({ section, contents }) => (
@@ -77,7 +74,6 @@ export const Debt: Story = {
       totalPayments: 1234.56,
       totalBalance: 1234.56,
       totalBalanceText: 'Total remaining debt',
-      icon: 'money',
     },
   },
   render: ({ section, contents }) => (
@@ -97,7 +93,6 @@ export const Savings: Story = {
       ],
       totalBalance: 1234.56,
       totalBalanceText: 'Total savings balance',
-      icon: 'money',
     },
   },
   render: ({ section, contents }) => (

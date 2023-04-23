@@ -14,16 +14,16 @@ const card = cva('rounded-xl dark:border-2 border-4 p-2', {
         'dark:bg-blue-600/40',
       ],
       spending: [
-        'border-spend-4',
-        'bg-spend-4/90',
-        'dark:border-yellow-400',
-        'dark:bg-yellow-500/40',
+        'border-purple-500',
+        'bg-purple-500/90',
+        'dark:border-violet-500',
+        'dark:bg-violet-500/40',
       ],
       debt: [
         'border-red-500',
         'bg-red-500/90',
         'dark:border-red-500',
-        'dark:bg-red-600/40',
+        'dark:bg-red-500/40',
       ],
       savings: [
         'border-green-500',
