@@ -51,7 +51,10 @@ module.exports = {
           8: '#6C592A',
           9: '#594A27',
         },
-        improbable: ['#ef476f', '#ffd166', '#06d6a0', '#118ab2', '#073b4c'],
+
+        save: [],
+        debt: [],
+        income: [],
       },
     },
   },

@@ -19,3 +19,4 @@ export * from './inputs/InputHelpText';
 export * from './inputs/InputLabel';
 export * from './inputs/Select';
 export * from './inputs/TextInput';
+export type { IconObject } from './Icon/iconMapping';

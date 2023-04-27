@@ -14,7 +14,7 @@ const card = cva('rounded-xl dark:border-2 border-4 p-2', {
         'dark:bg-blue-600/40',
       ],
       spending: [
-        'dark:border-spend-3/75',
+        'dark:border-spend-3',
         'dark:bg-spend-3/20',
         'border-spend-5',
         'bg-spend-5/80',
@@ -115,25 +115,3 @@ const PlanCard: React.FC<CardProps> = ({
 );
 
 export { PlanCard };
-
-{
-  /* <div className="mt-2 flex items-end gap-2">
-      <Icon object="goal" size="xs" colour="white"></Icon>
-      <Heading colour="white" size="medium" className="">
-        Your goals
-      </Heading>
-    </div>
-
-    <div className="flex justify-between">
-      <p className="text-white/70">Salary</p>
-      <p className="text-white/70">£456.65</p>
-    </div>
-
-    <div className="flex items-end justify-between">
-      <div className="flex items-center gap-2">
-        <Icon object="trendinUp" size="xs" colour="white"></Icon>
-        <p className="text-white/70">You are on track!</p>
-      </div>
-      <p className="text-white/70">6 months left</p>
-    </div> */
-}
