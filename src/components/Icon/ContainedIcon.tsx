@@ -12,7 +12,7 @@ const icon = cva('text-white rounded-xl', {
       spending: ['dark:bg-spend-4', 'bg-spend-4/80'],
     },
     size: {
-      xs: ['h-4 w-4 p-1'],
+      xs: ['h-6 w-6 p-1'],
       small: ['h-8 w-8 p-1'],
       medium: ['h-10 w-10 p-1'],
       large: ['h-16 w-16 p-1'],
