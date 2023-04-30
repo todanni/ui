@@ -1,5 +1,5 @@
 import React from 'react';
-import { Logo } from '../Logo';
+import { Logo } from '../../logos';
 import { NavbarProps } from './Navbar';
 
 const LogoNavbar: React.FC<NavbarProps> = ({

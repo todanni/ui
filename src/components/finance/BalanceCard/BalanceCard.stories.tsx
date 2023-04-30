@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { PlanCard } from './PlanCard';
+import { BalanceCard } from './BalanceCard';
 import React from 'react';
 
 const meta = {
-  title: 'Plan Card',
-  component: PlanCard,
-} satisfies Meta<typeof PlanCard>;
+  title: 'Balance Card',
+  component: BalanceCard,
+} satisfies Meta<typeof BalanceCard>;
 
 export default meta;
 
@@ -20,10 +20,10 @@ export const All: Story = {
   },
   render: ({ contents }) => (
     <div className="flex flex-col gap-4">
-      <PlanCard section="income" contents={contents} />
-      <PlanCard section="spending" contents={contents} />
-      <PlanCard section="debt" contents={contents} />
-      <PlanCard section="savings" contents={contents} />
+      <BalanceCard section="income" contents={contents} />
+      <BalanceCard section="spending" contents={contents} />
+      <BalanceCard section="debt" contents={contents} />
+      <BalanceCard section="savings" contents={contents} />
     </div>
   ),
 };
@@ -41,7 +41,7 @@ export const Income: Story = {
     },
   },
   render: ({ section, contents }) => (
-    <PlanCard section={section} contents={contents}></PlanCard>
+    <BalanceCard section={section} contents={contents}></BalanceCard>
   ),
 };
 
@@ -58,7 +58,7 @@ export const Spending: Story = {
     },
   },
   render: ({ section, contents }) => (
-    <PlanCard section={section} contents={contents}></PlanCard>
+    <BalanceCard section={section} contents={contents}></BalanceCard>
   ),
 };
 
@@ -77,7 +77,7 @@ export const Debt: Story = {
     },
   },
   render: ({ section, contents }) => (
-    <PlanCard section={section} contents={contents}></PlanCard>
+    <BalanceCard section={section} contents={contents}></BalanceCard>
   ),
 };
 
@@ -96,6 +96,6 @@ export const Savings: Story = {
     },
   },
   render: ({ section, contents }) => (
-    <PlanCard section={section} contents={contents}></PlanCard>
+    <BalanceCard section={section} contents={contents}></BalanceCard>
   ),
 };

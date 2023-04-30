@@ -1,7 +1,7 @@
 import React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
-import { IconObject } from '../Icon/iconMapping';
-import { Icon } from '../Icon/Icon';
+import { IconObject } from '../icons/iconMapping';
+import { Icon } from '../icons/Icon';
 
 const button = cva(
   'inline-flex items-center rounded-lg text-center font-medium text-white',
@@ -25,7 +25,7 @@ const button = cva(
   }
 );
 
-export interface ButtonProps
+export interface IconButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof button> {
   icon: IconObject;
@@ -33,7 +33,7 @@ export interface ButtonProps
   text: string;
 }
 
-const IconButton: React.FC<ButtonProps> = ({
+const IconButton: React.FC<IconButtonProps> = ({
   className,
   size,
   colour,

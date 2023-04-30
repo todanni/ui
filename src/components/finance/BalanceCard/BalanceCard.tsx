@@ -1,8 +1,7 @@
 import React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
-import { IconObject } from '../Icon/iconMapping';
-import { Heading } from '../typography/Heading';
-import { Icon } from '../Icon/Icon';
+import { Icon } from '~/components/common/icons/Icon';
+import { Heading } from '~/components/common/typography/Heading';
 
 const card = cva('rounded-xl dark:border-2 border-4 p-2', {
   variants: {
@@ -71,7 +70,7 @@ const getSectionIcon = (section: string | null | undefined) => {
   }
 };
 
-const PlanCard: React.FC<CardProps> = ({
+const BalanceCard: React.FC<CardProps> = ({
   className,
   section,
   contents,
@@ -114,4 +113,4 @@ const PlanCard: React.FC<CardProps> = ({
   </div>
 );
 
-export { PlanCard };
+export { BalanceCard };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Title } from '../typography/Title';
+import { Title } from '../../typography/Title';
 import { NavbarProps } from './Navbar';
 
 const TitleNavbar: React.FC<NavbarProps> = ({
