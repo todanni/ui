@@ -1,2 +1,2 @@
-export * from './BalanceCard/BalanceCard';
-export * from './PlanSection';
+export * from './balance';
+export * from './layout';
