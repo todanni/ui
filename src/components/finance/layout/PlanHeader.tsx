@@ -20,7 +20,7 @@ export const PlanHeader = ({
     <div className="flex items-center justify-between rounded-xl bg-grey-0/20 p-2 shadow-xl dark:bg-white/5">
       <div
         className="flex cursor-pointer items-center gap-2 p-2 "
-        onClick={() => onClick}
+        onClick={() => onClick('prev')}
       >
         <Icon object="arrowLeft" colour="default" size="small" />
         <h3 className="text-xs text-grey-5 hover:text-green-3 dark:text-white sm:text-sm">
@@ -37,7 +37,7 @@ export const PlanHeader = ({
       </div>
       <div
         className="flex cursor-pointer items-center gap-2 p-2 hover:text-green-3"
-        onClick={() => onClick}
+        onClick={() => onClick('next')}
       >
         <h3 className="text-xs text-grey-5 hover:text-green-3 dark:text-white sm:text-sm">
           {next}
