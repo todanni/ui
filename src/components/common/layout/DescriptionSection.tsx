@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Title } from '~/components';
+import { Heading, Title } from '~/components/common/typography';
 
 type SectionProps = {
   title: string;
