@@ -1,6 +1,6 @@
 import React from 'react';
-import { PlanGoalProgress } from './PlanGoalProgress';
-import { PlanPanelCard } from './PlanPanelCard';
+import { PlanPanelCard } from '../PlanPanelCard';
+import { PlanGoalProgress } from '../PlanGoalProgress';
 
 export type PlanGoal = {
   category: 'income' | 'spending' | 'debt' | 'savings';
@@ -12,7 +12,7 @@ export type PlanGoalsCardProps = {
   goals: PlanGoal[];
 };
 
-export const PlanGoalsCard = ({ goals }: PlanGoalsCardProps) => {
+export const PlanOverviewGoals = ({ goals }: PlanGoalsCardProps) => {
   return (
     <PlanPanelCard title="Goals" icon="goal" footerEnd="Goals met: 1/4">
       <div className="flex flex-col gap-2">

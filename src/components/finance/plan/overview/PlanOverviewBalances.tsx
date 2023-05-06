@@ -1,6 +1,6 @@
 import React from 'react';
-import { BalanceCardV2 } from '../balance/BalanceCardV2';
-import { PlanPanelCard } from './PlanPanelCard';
+import { BalanceCardV2 } from '../../balance/BalanceCardV2';
+import { PlanPanelCard } from '../PlanPanelCard';
 
 export const PlanBalanceSummary = () => {
   return (

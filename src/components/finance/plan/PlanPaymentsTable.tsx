@@ -8,8 +8,8 @@ export type PlanPaymentsTableProps = {
 
 export type CategoryTotal = {
   name: string;
-  total: number;
-  icon: IconObject;
+  total?: number;
+  icon?: IconObject;
   colour?: 'savings' | 'spending' | 'income' | 'debt';
   subCategories?: SubCategoryTotal[];
 };
@@ -44,11 +44,11 @@ const CategoryTotalRow = ({
   return (
     <>
       <div className="flex items-center gap-2 rounded-xl py-1">
-        <Icon object={icon} size="xs" />
+        {icon && <Icon object={icon} size="xs" />}
         <h1 className="text-md whitespace-nowrap font-semibold text-white sm:text-lg">
           {name}
         </h1>
-        <h1 className="ml-auto text-lg font-semibold text-white">£{total}</h1>
+        <h1 className="ml-auto text-lg font-semibold text-white">{total}</h1>
       </div>
       {subCategories?.map((subCategory) => (
         <SubCategoryTotalRow

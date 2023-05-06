@@ -1,5 +1,4 @@
 import React from 'react';
-import { ShadowCard } from '../layout';
 import { PlanPanelSelection } from './PlanPanelSelection';
 
 const selections = [
@@ -20,7 +19,7 @@ export const PlanPanelSelect = ({
   onClick,
 }: PlanPanelSelectProps) => {
   return (
-    <ShadowCard>
+    <div className="flex flex-col justify-between gap-4 rounded-xl bg-grey-0/20 p-4 shadow-xl dark:bg-white/5">
       <div className="grid auto-cols-fr grid-cols-5">
         {selections.map((selection) => (
           <PlanPanelSelection
@@ -31,6 +30,6 @@ export const PlanPanelSelect = ({
           />
         ))}
       </div>
-    </ShadowCard>
+    </div>
   );
 };

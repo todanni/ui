@@ -1,10 +1,9 @@
 import React from 'react';
-import { ShadowCard } from '~/components';
 import { IconButton } from '~/components/common';
 
 export const PlanActionsFooter = () => {
   return (
-    <ShadowCard>
+    <div className="flex flex-col justify-between gap-4 rounded-xl bg-grey-0/20 p-4 shadow-xl dark:bg-white/5">
       <div className="flex flex-wrap justify-between gap-2 sm:justify-around">
         <IconButton
           icon={'table'}
@@ -35,6 +34,6 @@ export const PlanActionsFooter = () => {
           className="hover:bg-red-800"
         />
       </div>
-    </ShadowCard>
+    </div>
   );
 };

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Icon } from '~/components';
-import { ShadowCard } from '~/components';
 
 export type PlanHeaderProps = {
   title: string;
@@ -18,7 +17,7 @@ export const PlanHeader = ({
   onClick,
 }: PlanHeaderProps) => {
   return (
-    <ShadowCard>
+    <div className="flex flex-col justify-between gap-4 rounded-xl bg-grey-0/20 p-4 shadow-xl dark:bg-white/5">
       <div className="flex items-center justify-between p-2">
         <div
           className="flex cursor-pointer items-center gap-2 sm:p-2"
@@ -47,6 +46,6 @@ export const PlanHeader = ({
           <Icon object="arrowRight" colour="default" size="small" />
         </div>
       </div>
-    </ShadowCard>
+    </div>
   );
 };
