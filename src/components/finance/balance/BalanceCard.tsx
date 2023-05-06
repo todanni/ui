@@ -51,7 +51,7 @@ type CardContentsProps = {
   totalBalanceText?: string;
 };
 
-export interface CardProps
+export interface BalanceCardProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof card> {
   contents: CardContentsProps;
@@ -70,7 +70,7 @@ const getSectionIcon = (section: string | null | undefined) => {
   }
 };
 
-const BalanceCard: React.FC<CardProps> = ({
+const BalanceCard: React.FC<BalanceCardProps> = ({
   className,
   section,
   contents,

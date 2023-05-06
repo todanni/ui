@@ -2,17 +2,20 @@ import React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { Icon } from '~/components/common/icons/Icon';
 
-const section = cva('flex items-center justify-center gap-2 rounded-xl py-2', {
-  variants: {
-    type: {
-      income: ['bg-blue-500', 'dark:bg-blue-600'],
-      spending: ['dark:bg-spend-4', 'bg-spend-4'],
-      debt: ['bg-red-500', 'dark:bg-red-800'],
-      savings: ['bg-green-4', 'dark:bg-green-4'],
-      default: ['bg-grey-3', 'dark:bg-white/10'],
+const section = cva(
+  'flex items-center justify-center gap-2 rounded-xl py-2 cursor-pointer',
+  {
+    variants: {
+      type: {
+        income: ['bg-blue-500', 'dark:bg-blue-600', 'shadow-2xl'],
+        spending: ['dark:bg-spend-4', 'bg-spend-4', 'shadow-2xl'],
+        debt: ['bg-red-500', 'dark:bg-red-700', 'shadow-2xl'],
+        savings: ['bg-green-4', 'dark:bg-green-4', 'shadow-2xl'],
+        default: ['bg-grey-3', 'dark:bg-white/10', 'shadow-2xl'],
+      },
     },
-  },
-});
+  }
+);
 
 const label = cva('font-bold dark:text-white', {
   variants: {

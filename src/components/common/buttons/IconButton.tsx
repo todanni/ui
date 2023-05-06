@@ -4,7 +4,7 @@ import { IconObject } from '../icons/iconMapping';
 import { Icon } from '../icons/Icon';
 
 const button = cva(
-  'inline-flex items-center rounded-lg text-center font-medium text-white',
+  'inline-flex items-center rounded-lg text-center font-medium text-white whitespace-nowrap',
   {
     variants: {
       colour: {

@@ -12,6 +12,19 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {},
-  render: () => <PlanHeader />,
+  args: {
+    title: 'Your plan',
+    subtitle: 'April 2023',
+    previous: 'March 2023',
+    next: 'May 2023',
+  },
+  render: ({ title, subtitle, previous, next }) => (
+    <PlanHeader
+      title={title}
+      subtitle={subtitle}
+      previous={previous}
+      next={next}
+      onClick={() => console.log('clicked')}
+    />
+  ),
 };

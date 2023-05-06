@@ -1,6 +1,6 @@
 import React from 'react';
-import { Icon } from '~/components/common/icons/Icon';
-import { ShadowCard } from './ShadowCard';
+import { Icon } from '~/components';
+import { ShadowCard } from '~/components';
 
 export type PlanHeaderProps = {
   title: string;
@@ -21,16 +21,16 @@ export const PlanHeader = ({
     <ShadowCard>
       <div className="flex items-center justify-between p-2">
         <div
-          className="flex cursor-pointer items-center gap-2 p-2 "
+          className="flex cursor-pointer items-center gap-2 sm:p-2"
           onClick={() => onClick('prev')}
         >
           <Icon object="arrowLeft" colour="default" size="small" />
-          <h3 className="text-xs text-grey-5 hover:text-green-3 dark:text-white sm:text-sm">
+          <h3 className="invisible text-xs text-grey-5 hover:text-green-3 dark:text-white sm:visible sm:text-sm">
             {previous}
           </h3>
         </div>
         <div className="flex flex-col items-center gap-1">
-          <h1 className="text-xl font-bold text-grey-5 dark:text-white sm:text-3xl">
+          <h1 className="whitespace-nowrap text-xl font-bold text-grey-5 dark:text-white sm:text-3xl">
             {title}
           </h1>
           <h3 className="sm:text-md text-sm font-light tracking-tight text-green-3 dark:text-green-4">
@@ -38,10 +38,10 @@ export const PlanHeader = ({
           </h3>
         </div>
         <div
-          className="flex cursor-pointer items-center gap-2 p-2 hover:text-green-3"
+          className="flex cursor-pointer items-center gap-2 hover:text-green-3 sm:p-2"
           onClick={() => onClick('next')}
         >
-          <h3 className="text-xs text-grey-5 hover:text-green-3 dark:text-white sm:text-sm">
+          <h3 className="invisible text-xs text-grey-5 hover:text-green-3 dark:text-white sm:visible sm:text-sm">
             {next}
           </h3>
           <Icon object="arrowRight" colour="default" size="small" />

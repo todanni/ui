@@ -7,7 +7,7 @@ const icon = cva('', {
     colour: {
       default: ['dark:text-white', 'text-grey-5'],
       savings: ['dark:text-green-4 ', 'text-green-500/80'],
-      debt: ['dark:text-red-800', 'text-red-500/80'],
+      debt: ['dark:text-red-600', 'text-red-500/80'],
       income: ['dark:text-blue-700', ' text-blue-500/80'],
       spending: ['dark:text-spend-3', 'text-spend-5/80'],
       white: ['text-white dark:text-white'],

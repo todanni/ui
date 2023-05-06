@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { PlanSelect } from './SectionSelect';
+import { PlanSelect } from './PlanSelect';
 import React from 'react';
 
 const meta = {
