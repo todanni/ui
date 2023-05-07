@@ -1,101 +1,33 @@
 import React from 'react';
 import { PlanPanel } from '../PlanPanel';
-import { PlanPanelCard } from '../PlanPanelCard';
-import { CategoryTotal, PlanPaymentsTable } from '../PlanPaymentsTable';
-import { PlanSpendingGoals } from './PlanSpendingGoals';
+import { PlanGoalsCard } from '../PlanGoalsCard';
+import {
+  PlanSpendingPayments,
+  PlanSpendingPaymentsProps,
+} from './PlanSpendingPayments';
 
-export const PlanSpendingPanel = () => {
+const noGoalsText = 'Example: Spend less than 200£ on shopping.' as const;
+
+export type PlanSpendingPanelProps = {
+  payments: PlanSpendingPaymentsProps;
+  goals: {
+    loading: boolean;
+  };
+};
+
+export const PlanSpendingPanel = ({
+  payments,
+  goals,
+}: PlanSpendingPanelProps) => {
   return (
     <PlanPanel>
-      <PlanPanelCard
-        title="Living costs"
-        icon="summary"
-        footerText="Total"
-        footerEnd="£1543.23"
-      >
-        <PlanPaymentsTable categories={payments} />
-      </PlanPanelCard>
-      <PlanSpendingGoals />
+      <PlanSpendingPayments {...payments} />
+      <PlanGoalsCard
+        title="Spending goals"
+        noGoalsText={noGoalsText}
+        progressColour="spending"
+        loading={goals.loading}
+      />
     </PlanPanel>
   );
 };
-
-const payments: CategoryTotal[] = [
-  {
-    name: 'Bills',
-    total: 1234.56,
-    icon: 'money',
-    subCategories: [
-      {
-        name: 'Council tax',
-        total: 50.87,
-      },
-      {
-        name: 'Electricity bill',
-        total: 50.87,
-      },
-      {
-        name: 'Water bill',
-        total: 50.87,
-      },
-      {
-        name: 'Phone bill',
-        total: 50.87,
-      },
-      {
-        name: 'Insurance',
-        total: 50.87,
-      },
-    ],
-  },
-  {
-    name: 'Living costs',
-    total: 1234.56,
-    icon: 'wallet',
-    subCategories: [
-      {
-        name: 'Groceries',
-        total: 50.87,
-      },
-      {
-        name: 'Transport',
-        total: 50.87,
-      },
-      {
-        name: 'Medication',
-        total: 50.87,
-      },
-      {
-        name: 'Pets',
-        total: 50.87,
-      },
-    ],
-  },
-  {
-    name: 'Discretionary',
-    total: 1234.56,
-    icon: 'card',
-    subCategories: [
-      {
-        name: 'Shopping',
-        total: 50.87,
-      },
-      {
-        name: 'Eating out',
-        total: 50.87,
-      },
-      {
-        name: 'Subscriptions',
-        total: 50.87,
-      },
-      {
-        name: 'Personal care',
-        total: 50.87,
-      },
-      {
-        name: 'Travel',
-        total: 50.87,
-      },
-    ],
-  },
-];

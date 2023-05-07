@@ -4,91 +4,57 @@ import { PlanPanelCard } from '../PlanPanelCard';
 import { PlanPaymentsChart } from '../PlanPaymentsChart';
 import { CategoryTotal, PlanPaymentsTable } from '../PlanPaymentsTable';
 import { PlanGoal } from '../overview/PlanOverviewGoals';
+import { PlanSavingsGoals } from './PlanSavingsGoals';
 
 export const PlanSavingsPanel = () => {
   return (
     <PlanPanel>
-      <PlanPanelCard
-        title="Payments summary"
-        icon="summary"
-        footerText="Remaining"
-        footerEnd="£543.23"
-      >
+      <PlanPanelCard title="Savings contributions" icon="piggy">
         <PlanPaymentsTable categories={payments} />
       </PlanPanelCard>
-      <PlanPanelCard
-        title="Payments breakdown"
-        icon="plan"
-        footerText="Wants/Needs/Savings"
-        footerEnd="50/30/20"
-      >
-        <PlanPaymentsChart />
-      </PlanPanelCard>
+      <PlanSavingsGoals />
     </PlanPanel>
   );
 };
 
-const goals: PlanGoal[] = [
-  { category: 'income', goal: 1234.56, amount: 1234.56 },
-  { category: 'spending', goal: 1234.56, amount: 234.56 },
-  { category: 'debt', goal: 1234.56, amount: 423.56 },
-  { category: 'savings', goal: 1234.56, amount: 534.56 },
-];
-
 const payments: CategoryTotal[] = [
   {
-    name: 'Income',
-    total: 1234.56,
-    icon: 'money',
-    subCategories: [
-      {
-        name: '+ Transfers',
-        total: 50.87,
-      },
-      {
-        name: '+ Deductions',
-        total: 50.87,
-      },
-    ],
-  },
-  {
-    name: 'Spending',
-    total: 1234.56,
-    icon: 'wallet',
-    subCategories: [
-      {
-        name: 'Bills',
-        total: 50.87,
-      },
-      {
-        name: 'Living costs',
-        total: 50.87,
-      },
-      {
-        name: 'Discretionary',
-        total: 50.87,
-      },
-    ],
-  },
-  {
-    name: 'Debt',
-    total: 1234.56,
-    icon: 'card',
-    subCategories: [
-      {
-        name: 'From deductions',
-        total: 50.87,
-      },
-    ],
-  },
-  {
     name: 'Savings',
-    total: 1234.56,
+    total: 9924.62,
     icon: 'piggy',
+    colour: 'savings',
     subCategories: [
       {
-        name: 'From deductions',
-        total: 50.87,
+        name: 'Pension RL',
+        total: 4671.01,
+      },
+      {
+        name: 'Pension HL',
+        total: 4145.62,
+      },
+      {
+        name: 'Cash ISA',
+        total: 800.01,
+      },
+      {
+        name: 'Stocks ISA',
+        total: 300.01,
+      },
+    ],
+  },
+  {
+    name: 'Assets',
+    total: 373000,
+    icon: 'wallet',
+    colour: 'spending',
+    subCategories: [
+      {
+        name: 'House',
+        total: 348000,
+      },
+      {
+        name: 'Car',
+        total: 25000,
       },
     ],
   },

@@ -1,74 +1,51 @@
 import React from 'react';
 import { PlanPanelCard } from '../PlanPanelCard';
 
-export const PlanDebtBalances = () => {
+export type PlanDebtBalancesProps = {
+  balanceTotal: number;
+  balances: {
+    name: string;
+    balance: number;
+    interestTotal: number;
+    paymentsTotal: number;
+  }[];
+};
+
+export const PlanDebtBalances = ({
+  balanceTotal,
+  balances,
+}: PlanDebtBalancesProps) => {
   return (
     <PlanPanelCard
       icon="percentReceipt"
-      title="Debt balances"
+      title="Debt balance"
       footerText="Total"
-      footerEnd="£290,876.19"
+      footerEnd={'£' + balanceTotal.toLocaleString('en-UK')}
     >
-      <div className="mb-2 grid grid-cols-4 text-white">
-        <h2 className="font-bold">Category</h2>
-        <h3 className="font-semibold">Loan provider</h3>
-        <p className="text-right">Min payment</p>
-        <p className="text-right">Interest rate</p>
+      <div className="grid grid-cols-2 gap-1 p-2">
+        {balances.map((balance) => (
+          <>
+            <h1 className="sm:text-md text-md font-bold text-white">
+              {balance.name}
+            </h1>
+            <h1 className="sm:text-md text-md justify-self-end text-end text-white">
+              £{balance.balance.toLocaleString('en-UK')}
+            </h1>
+            <h1 className="sm:text-md text-sm text-white/80">
+              Payments total:
+            </h1>
+            <h1 className="sm:text-md text-end text-sm text-white/70">
+              £{balance.paymentsTotal.toLocaleString('en-UK')}
+            </h1>
+            <h1 className="sm:text-md text-sm text-white/80">
+              Interest total:
+            </h1>
+            <h1 className="sm:text-md text-end text-sm text-white/70">
+              £{balance.interestTotal.toLocaleString('en-UK')}
+            </h1>
+          </>
+        ))}
       </div>
-      {debts.map((debt) => (
-        <div key={debt.name} className="mb-2 grid grid-cols-4 text-white">
-          <h2>{debt.category}</h2>
-          <h3>{debt.name}</h3>
-          <p className="text-right">£{debt.minPayment}</p>
-          <p className="text-right">{debt.interestRate}%</p>
-        </div>
-      ))}
     </PlanPanelCard>
   );
 };
-
-export type DebtBalance = {
-  category: string;
-  name: string;
-  minPayment: number;
-  interestRate: number;
-  balance: number;
-};
-
-const debts: DebtBalance[] = [
-  {
-    category: 'Mortgage',
-    name: 'Virgin money',
-    minPayment: 50.87,
-    interestRate: 1.99,
-    balance: 1234.56,
-  },
-  {
-    category: 'Car loan',
-    name: 'VW Finance',
-    minPayment: 650.87,
-    interestRate: 10.99,
-    balance: 27234.56,
-  },
-  {
-    category: 'Student loan',
-    name: 'Student loans company',
-    minPayment: 50.87,
-    interestRate: 1.99,
-    balance: 1234.56,
-  },
-  {
-    category: 'Personal loan',
-    name: 'Monzo',
-    minPayment: 50.87,
-    interestRate: 1.99,
-    balance: 1234.56,
-  },
-  {
-    category: 'Personal loan',
-    name: 'Novuna',
-    minPayment: 50.87,
-    interestRate: 1.99,
-    balance: 1234.56,
-  },
-];

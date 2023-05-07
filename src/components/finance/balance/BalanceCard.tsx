@@ -2,8 +2,9 @@ import React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { Icon } from '~/components/common/icons/Icon';
 import { Heading } from '~/components/common/typography/Heading';
+import { IconObject } from '~/components/common/icons/iconMapping';
 
-const card = cva('rounded-xl dark:border-2 border-4 p-2', {
+const card = cva('rounded-xl dark:border-2 border-4 p-2 flex justify-between', {
   variants: {
     section: {
       income: [
@@ -38,78 +39,36 @@ const card = cva('rounded-xl dark:border-2 border-4 p-2', {
   },
 });
 
-type PaymentSource = {
-  name: string;
-  amount: number;
-};
-
-type CardContentsProps = {
-  title: string;
-  totalPayments: number;
-  sources?: PaymentSource[];
-  totalBalance?: number;
-  totalBalanceText?: string;
-};
-
-export interface BalanceCardProps
+export interface BalanceCardV2Props
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof card> {
-  contents: CardContentsProps;
+  title: string;
+  balance: string;
+  icon: IconObject;
 }
 
-const getSectionIcon = (section: string | null | undefined) => {
-  switch (section) {
-    case 'income':
-      return <Icon object="money" colour="white" size="xs" />;
-    case 'spending':
-      return <Icon object="wallet" colour="white" size="xs" />;
-    case 'debt':
-      return <Icon object="bank" colour="white" size="xs" />;
-    case 'savings':
-      return <Icon object="piggy" colour="white" size="xs" />;
-  }
-};
-
-const BalanceCard: React.FC<BalanceCardProps> = ({
+const BalanceCard: React.FC<BalanceCardV2Props> = ({
   className,
   section,
-  contents,
+  title,
+  balance,
+  icon,
   ...props
 }) => (
   <div className={card({ section, className })} {...props}>
-    <div className="flex items-end justify-between">
-      <div className="flex items-center gap-2">
-        {getSectionIcon(section)}
-        <Heading colour="white" size="medium" className="">
-          {contents.title}
-        </Heading>
-      </div>
-      <Heading colour="white" size="medium">
-        £{contents.totalPayments.toLocaleString('en-UK')}
+    <div className="flex items-center gap-2">
+      <Icon object={icon} colour="white" size="xs" />
+      <Heading colour="white" size="small" className="">
+        {title}
       </Heading>
     </div>
 
-    {contents.sources?.map((source) => (
-      <div key={source.name} className="flex justify-between">
-        <p className="text-white/70">{source.name}</p>
-        <p className="text-white/70">
-          £{source.amount.toLocaleString('en-UK')}
-        </p>
-      </div>
-    ))}
-
-    {contents.totalBalanceText && (
-      <div className="mt-2 flex items-end justify-between">
-        <div className="flex items-center gap-2">
-          <Heading colour="white" size="medium" className="">
-            {contents.totalBalanceText}
-          </Heading>
-        </div>
-        <Heading colour="white" size="medium">
-          {contents.totalBalance?.toLocaleString('en-UK')}
-        </Heading>
-      </div>
-    )}
+    <div className="flex items-center gap-1">
+      <Heading colour="white" size="small">
+        {balance}
+      </Heading>
+      <Icon object="help" colour="white" size="xs" />
+    </div>
   </div>
 );
 

@@ -35,13 +35,78 @@ export const Plan = ({ selected }: PlanProps) => {
 const showPanel = (selected: PlanProps['selected']) => {
   switch (selected) {
     case 'overview':
-      return <PlanOverviewPanel />;
+      return (
+        <PlanOverviewPanel
+          remaining={0}
+          incomeTotal={0}
+          spendingTotal={0}
+          debtTotal={0}
+          savingsTotal={0}
+          transfersTotal={0}
+          goals={[]}
+        />
+      );
     case 'income':
-      return <PlanIncomePanel />;
+      return (
+        <PlanIncomePanel
+          payments={{
+            loading: false,
+            total: 0,
+            income: {
+              total: 0,
+              payments: [],
+            },
+            deductions: {
+              total: 0,
+              payments: [],
+            },
+          }}
+          tax={[]}
+          goals={{
+            loading: false,
+            goals: [],
+          }}
+        />
+      );
     case 'spending':
-      return <PlanSpendingPanel />;
+      return (
+        <PlanSpendingPanel
+          payments={{
+            total: 0,
+            livingCosts: {
+              total: 0,
+              payments: [],
+            },
+            bills: {
+              total: 0,
+              payments: [],
+            },
+            discretionary: {
+              total: 0,
+              payments: [],
+            },
+            loading: false,
+          }}
+          goals={{
+            loading: false,
+          }}
+        />
+      );
     case 'debt':
-      return <PlanDebtPanel />;
+      return (
+        <PlanDebtPanel
+          debtRepayments={{
+            repayments: [],
+            total: 0,
+            loading: false,
+          }}
+          debtBalances={{
+            balanceTotal: 0,
+            balances: [],
+          }}
+          goals={[]}
+        />
+      );
     case 'savings':
       return <PlanSavingsPanel />;
   }

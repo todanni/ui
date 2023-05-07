@@ -1,37 +1,58 @@
 import React from 'react';
-import { BalanceCardV2 } from '../../balance/BalanceCardV2';
+import { BalanceCard } from '../../balance/BalanceCard';
 import { PlanPanelCard } from '../PlanPanelCard';
 
-export const PlanBalanceSummary = () => {
+export type PlanBalanceSummaryProps = {
+  incomeBalance: number;
+  assets: number;
+  debt: number;
+  savings: number;
+  networth: number;
+};
+
+export const PlanBalanceSummary = ({
+  incomeBalance,
+  assets,
+  debt,
+  savings,
+  networth,
+}: PlanBalanceSummaryProps) => {
+  const formatBalance = (balance: number) => {
+    return balance.toLocaleString('en-GB', {
+      maximumFractionDigits: 2,
+      minimumFractionDigits: 2,
+    });
+  };
+
   return (
     <PlanPanelCard
       icon="percentReceipt"
       title="Balance summary"
       footerText="Networth estimate"
-      footerEnd="£66,789.24"
+      footerEnd={formatBalance(networth)}
     >
       <div className="flex flex-col gap-2">
-        <BalanceCardV2
+        <BalanceCard
           title="Income"
-          balance={543.23}
+          balance={formatBalance(incomeBalance)}
           icon="money"
           section="income"
         />
-        <BalanceCardV2
+        <BalanceCard
           title="Assets"
-          balance={234567.65}
+          balance={formatBalance(assets)}
           icon="assets"
           section="spending"
         />
-        <BalanceCardV2
+        <BalanceCard
           title="Debt"
-          balance={123456.65}
+          balance={formatBalance(debt)}
           icon="card"
           section="debt"
         />
-        <BalanceCardV2
+        <BalanceCard
           title="Savings"
-          balance={10987.65}
+          balance={formatBalance(savings)}
           icon="piggy"
           section="savings"
         />

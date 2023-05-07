@@ -17,7 +17,7 @@ export const PlanHeader = ({
   onClick,
 }: PlanHeaderProps) => {
   return (
-    <div className="flex flex-col justify-between gap-4 rounded-xl bg-grey-0/20 p-4 shadow-xl dark:bg-white/5">
+    <div className="flex flex-col justify-between gap-4 rounded-xl bg-grey-0/20 p-2 shadow-xl dark:bg-white/5">
       <div className="flex items-center justify-between p-2">
         <div
           className="flex cursor-pointer items-center gap-2 sm:p-2"

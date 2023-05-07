@@ -4,22 +4,60 @@ import { PlanPanelCard } from '../PlanPanelCard';
 import { PlanPaymentsChart } from '../PlanPaymentsChart';
 import { CategoryTotal, PlanPaymentsTable } from '../PlanPaymentsTable';
 import { PlanTaxSummary } from './PlanTaxSummary';
+import { PlanGoalsCard } from '../PlanGoalsCard';
+import { PlanIncomePayments } from './PlanIncomePayments';
 
-export const PlanIncomePanel = () => {
+export type PlanIncomePanelProps = {
+  payments: {
+    loading: boolean;
+    total: number;
+    income: {
+      total: number;
+      payments: {
+        name: string;
+        total: number;
+      }[];
+    };
+    deductions: {
+      total: number;
+      payments: {
+        name: string;
+        total: number;
+      }[];
+    };
+  };
+  tax: {
+    name: string;
+    amount: number;
+  }[];
+  goals: {
+    loading: boolean;
+    goals: {}[];
+  };
+};
+
+const noGoalsText = 'Example: Earn an extra 100£' as const;
+
+export const PlanIncomePanel = ({
+  payments,
+  tax,
+  goals,
+}: PlanIncomePanelProps) => {
   return (
     <PlanPanel>
-      <PlanPanelCard
-        title="Income payments"
-        icon="money"
-        footerText="Total"
-        footerEnd="£5,432.11"
-      >
-        <PlanPaymentsTable categories={payments} />
-      </PlanPanelCard>
-      <PlanTaxSummary />
-      <PlanPanelCard title="Income breakdown" icon="breakdown">
-        <PlanPaymentsChart />
-      </PlanPanelCard>
+      <PlanIncomePayments
+        total={payments.total}
+        income={payments.income}
+        deductions={payments.deductions}
+        loading={payments.loading}
+      />
+      <PlanTaxSummary taxPayments={tax} />
+      <PlanGoalsCard
+        title="Income goals"
+        noGoalsText={noGoalsText}
+        progressColour="income"
+        loading={goals.loading}
+      />
     </PlanPanel>
   );
 };

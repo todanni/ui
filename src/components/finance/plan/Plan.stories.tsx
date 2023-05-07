@@ -11,7 +11,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Headings: Story = {
+export const Example: Story = {
   args: {
     selected: 'overview',
   },

@@ -22,6 +22,7 @@ export const PlanOverviewGoals = ({ goals }: PlanGoalsCardProps) => {
             category={goal.category}
             target={goal.goal}
             amount={goal.amount}
+            displayMessage={false}
           />
         ))}
       </div>

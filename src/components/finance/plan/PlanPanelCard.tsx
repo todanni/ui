@@ -5,6 +5,8 @@ interface PlanCardProps {
   children: React.ReactNode;
   icon: IconObject;
   title: string;
+  endButton?: IconObject;
+  endButtonOnClick?: () => void;
   footerText?: string;
   footerEnd?: string;
   footer?: React.ReactNode;
@@ -17,16 +19,26 @@ export const PlanPanelCard = ({
   footerText,
   footerEnd,
   footer,
+  endButton,
 }: PlanCardProps) => {
   return (
     <div className="flex flex-col justify-between gap-4 rounded-xl bg-grey-0/20 p-4 shadow-xl dark:bg-white/5">
-      <div className="flex items-center gap-2 ">
-        <Icon object={icon} size="xs" />
-        <h1 className="text-md  whitespace-nowrap font-bold text-white sm:text-xl">
-          {title}
-        </h1>
+      <div className="flex flex-col gap-2">
+        <div className="flex items-center gap-2 ">
+          <Icon object={icon} size="xs" />
+          <h1 className="text-md  whitespace-nowrap font-bold text-white sm:text-xl">
+            {title}
+          </h1>
+          {endButton && (
+            <Icon
+              object={endButton}
+              size="xs"
+              className="ml-auto cursor-pointer hover:text-green-4"
+            />
+          )}
+        </div>
+        <div>{children}</div>
       </div>
-      <div>{children}</div>
       <div className="flex items-center">
         <div className="w-6" />
         {footerText && (

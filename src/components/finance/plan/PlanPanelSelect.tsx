@@ -9,9 +9,11 @@ const selections = [
   'savings',
 ] as const;
 
+export type Selection = (typeof selections)[number];
+
 export type PlanPanelSelectProps = {
-  selected: (typeof selections)[number];
-  onClick: (panel: string) => void;
+  selected: Selection;
+  onClick: (panel: Selection) => void;
 };
 
 export const PlanPanelSelect = ({
@@ -19,7 +21,7 @@ export const PlanPanelSelect = ({
   onClick,
 }: PlanPanelSelectProps) => {
   return (
-    <div className="flex flex-col justify-between gap-4 rounded-xl bg-grey-0/20 p-4 shadow-xl dark:bg-white/5">
+    <div className="flex flex-col justify-between gap-4 rounded-xl bg-grey-0/20 p-2 shadow-xl dark:bg-white/5">
       <div className="grid auto-cols-fr grid-cols-5">
         {selections.map((selection) => (
           <PlanPanelSelection

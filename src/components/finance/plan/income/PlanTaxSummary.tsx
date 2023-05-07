@@ -1,9 +1,19 @@
 import React from 'react';
 import { PlanPanelCard } from '../PlanPanelCard';
 
-export const PlanTaxSummary = () => {
+export type PlanTaxSummaryProps = {
+  taxPayments: {
+    name: string;
+    amount: number;
+  }[];
+};
+
+export const PlanTaxSummary = ({ taxPayments }: PlanTaxSummaryProps) => {
   return (
-    <PlanPanelCard icon={'calculator'} title="Tax year summary">
+    <PlanPanelCard icon="calendar" title="Tax year summary" endButton="help">
+      <h2 className="text-md mb-4 text-white/80">
+        Income payments and tax deductions for current tax year
+      </h2>
       {payments.map((payment) => (
         <div key={payment.name} className="flex justify-between">
           <h1 className="text-white"> {payment.name} </h1>

@@ -1,48 +1,46 @@
 import React from 'react';
 import { PlanGoal, PlanOverviewGoals } from './PlanOverviewGoals';
 import { PlanPanel } from '../PlanPanel';
-import { PlanPanelCard } from '../PlanPanelCard';
 import { PlanPaymentsChart } from '../PlanPaymentsChart';
 import { CategoryTotal, PlanPaymentsTable } from '../PlanPaymentsTable';
 import { PlanBalanceSummary } from './PlanOverviewBalances';
 
-export const PlanOverviewPanel = () => {
+export type PlanOverviewPanelProps = {
+  remaining: number;
+  incomeTotal: number;
+  spendingTotal: number;
+  debtTotal: number;
+  savingsTotal: number;
+  transfersTotal: number;
+  goals: PlanGoal[];
+};
+
+export const PlanOverviewPanel = ({
+  remaining,
+  goals,
+}: PlanOverviewPanelProps) => {
   return (
     <PlanPanel>
-      <PlanPanelCard
-        title="Payments summary"
-        icon="summary"
-        footerText="Remaining"
-        footerEnd="£543.23"
-      >
-        <PlanPaymentsTable categories={payments} />
-      </PlanPanelCard>
-      <PlanPanelCard
-        title="Payments breakdown"
-        icon="plan"
-        footerText="Wants/Needs/Savings"
-        footerEnd="50/30/20"
-      >
-        <PlanPaymentsChart />
-      </PlanPanelCard>
+      <PlanPaymentsTable categories={payments} />
+      <PlanPaymentsChart payments={[]} percentageSplit={'20/30/50'} />
       <PlanOverviewGoals goals={goals} />
-      <PlanBalanceSummary />
+      <PlanBalanceSummary
+        incomeBalance={0}
+        assets={0}
+        debt={0}
+        savings={0}
+        networth={0}
+      />
     </PlanPanel>
   );
 };
-
-const goals: PlanGoal[] = [
-  { category: 'income', goal: 1234.56, amount: 1234.56 },
-  { category: 'spending', goal: 1234.56, amount: 234.56 },
-  { category: 'debt', goal: 1234.56, amount: 423.56 },
-  { category: 'savings', goal: 1234.56, amount: 534.56 },
-];
 
 const payments: CategoryTotal[] = [
   {
     name: 'Income',
     total: 1234.56,
     icon: 'money',
+    colour: 'income',
     subCategories: [
       {
         name: '+ Transfers',
@@ -58,6 +56,7 @@ const payments: CategoryTotal[] = [
     name: 'Spending',
     total: 1234.56,
     icon: 'wallet',
+    colour: 'spending',
     subCategories: [
       {
         name: 'Bills',
@@ -77,6 +76,7 @@ const payments: CategoryTotal[] = [
     name: 'Debt',
     total: 1234.56,
     icon: 'card',
+    colour: 'debt',
     subCategories: [
       {
         name: 'From deductions',
@@ -88,6 +88,7 @@ const payments: CategoryTotal[] = [
     name: 'Savings',
     total: 1234.56,
     icon: 'piggy',
+    colour: 'savings',
     subCategories: [
       {
         name: 'From deductions',
