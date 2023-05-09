@@ -10,6 +10,10 @@ const icon = cva('', {
       debt: ['dark:text-red-600', 'text-red-500/80'],
       income: ['dark:text-blue-700', ' text-blue-500/80'],
       spending: ['dark:text-spend-3', 'text-spend-5/80'],
+      green: ['dark:text-green-4 ', 'text-green-500/80'],
+      red: ['dark:text-red-600', 'text-red-500/80'],
+      blue: ['dark:text-blue-700', ' text-blue-500/80'],
+      yellow: ['dark:text-spend-3', 'text-spend-5/80'],
       white: ['text-white dark:text-white'],
     },
     size: {
@@ -21,7 +25,6 @@ const icon = cva('', {
     },
   },
   defaultVariants: {
-    size: 'medium',
     colour: 'default',
   },
 });

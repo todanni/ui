@@ -3,7 +3,7 @@ import { FooterCopyright } from './FooterCopyright';
 import React from 'react';
 
 const meta = {
-  title: 'Footer/Components/Copyright',
+  title: 'Components/Footer/Copyright',
   component: FooterCopyright,
 } satisfies Meta<typeof FooterCopyright>;
 

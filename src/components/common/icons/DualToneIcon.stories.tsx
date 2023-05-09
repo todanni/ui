@@ -3,7 +3,7 @@ import React from 'react';
 import { DualToneIcon } from './DualToneIcon';
 
 const meta = {
-  title: 'Icon/Dual Tone',
+  title: 'Components/Icons/Dual Tone',
   component: DualToneIcon,
 } satisfies Meta<typeof DualToneIcon>;
 

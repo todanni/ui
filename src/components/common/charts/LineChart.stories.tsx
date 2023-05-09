@@ -3,7 +3,7 @@ import React from 'react';
 import { LineChart } from './LineChart';
 
 const meta = {
-  title: 'Charts/LineChart',
+  title: 'Components/Charts/LineChart',
   component: LineChart,
 } satisfies Meta<typeof LineChart>;
 

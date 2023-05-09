@@ -3,7 +3,7 @@ import React from 'react';
 import { ContainedIcon } from './ContainedIcon';
 
 const meta = {
-  title: 'Icon/Contained',
+  title: 'Components/Icons/Contained',
   component: ContainedIcon,
 } satisfies Meta<typeof ContainedIcon>;
 

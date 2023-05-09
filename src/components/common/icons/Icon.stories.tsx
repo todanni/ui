@@ -3,7 +3,7 @@ import React from 'react';
 import { Icon } from './Icon';
 
 const meta = {
-  title: 'Icon/Default',
+  title: 'Components/Icons/Default',
   component: Icon,
 } satisfies Meta<typeof Icon>;
 

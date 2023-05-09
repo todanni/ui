@@ -3,7 +3,7 @@ import React from 'react';
 import { Select } from './Select';
 
 const meta = {
-  title: 'Inputs/Select',
+  title: 'Components/Inputs/Select',
   component: Select,
 } satisfies Meta<typeof Select>;
 

@@ -3,7 +3,7 @@ import React from 'react';
 import { InputLabel } from './InputLabel';
 
 const meta = {
-  title: 'Inputs/Input Label',
+  title: 'Components/Inputs/Input Label',
   component: InputLabel,
 } satisfies Meta<typeof InputLabel>;
 

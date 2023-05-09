@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from './Button';
 
 const meta = {
-  title: 'Buttons/Button',
+  title: 'Components/Buttons/Button',
   component: Button,
 } satisfies Meta<typeof Button>;
 

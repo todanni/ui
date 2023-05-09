@@ -3,7 +3,7 @@ import { Heading } from './Heading';
 import React from 'react';
 
 const meta = {
-  title: 'Typography/Heading',
+  title: 'Components/Typography/Heading',
   component: Heading,
 } satisfies Meta<typeof Heading>;
 

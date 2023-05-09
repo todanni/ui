@@ -3,7 +3,7 @@ import React from 'react';
 import { DonutChart } from './DonutChart';
 
 const meta = {
-  title: 'Charts/DonutChart',
+  title: 'Components/Charts/DonutChart',
   component: DonutChart,
 } satisfies Meta<typeof DonutChart>;
 

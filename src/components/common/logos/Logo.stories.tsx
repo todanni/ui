@@ -3,7 +3,7 @@ import { Logo } from './Logo';
 import React from 'react';
 
 const meta = {
-  title: 'Logo',
+  title: 'Components/Logos',
   component: Logo,
 } satisfies Meta<typeof Logo>;
 

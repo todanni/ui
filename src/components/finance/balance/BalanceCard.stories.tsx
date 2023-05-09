@@ -14,7 +14,7 @@ type Story = StoryObj<typeof meta>;
 export const All: Story = {
   args: {
     title: 'Debt',
-    balance: 1234.56,
+    balance: '£1,234.56',
     icon: 'debt',
     section: 'debt',
   },

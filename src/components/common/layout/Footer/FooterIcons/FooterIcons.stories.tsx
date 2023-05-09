@@ -3,7 +3,7 @@ import { FooterIcons } from './FooterIcons';
 import React from 'react';
 
 const meta = {
-  title: 'Footer/Components/Icons',
+  title: 'Components/Footer/Icons',
   component: FooterIcons,
 } satisfies Meta<typeof FooterIcons>;
 

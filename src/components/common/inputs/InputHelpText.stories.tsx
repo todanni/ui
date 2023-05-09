@@ -3,7 +3,7 @@ import React from 'react';
 import { InputHelpText } from './InputHelpText';
 
 const meta = {
-  title: 'Inputs/HelpText',
+  title: 'Components/Inputs/HelpText',
   component: InputHelpText,
 } satisfies Meta<typeof InputHelpText>;
 

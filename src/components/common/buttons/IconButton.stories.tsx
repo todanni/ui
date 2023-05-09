@@ -3,7 +3,7 @@ import React from 'react';
 import { IconButton } from './IconButton';
 
 const meta = {
-  title: 'Buttons/IconButton',
+  title: 'Components/Buttons/IconButton',
   component: IconButton,
 } satisfies Meta<typeof IconButton>;
 
@@ -11,29 +11,16 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const GreenArrowRight: Story = {
   args: {
-    size: 'medium',
-    colour: 'savings',
     text: 'Get started',
-    icon: 'arrowRight',
+    iconEnd: 'arrowRight',
+    fill: 'green',
+    size: 'md',
   },
-  render: ({ size, colour, text, icon }) => (
+  render: ({ text, iconEnd, fill, size }) => (
     <div className="flex w-fit flex-col gap-2">
-      <IconButton
-        text={text}
-        size={size}
-        colour={colour}
-        icon={icon}
-        iconStart={true}
-      />
-      <IconButton
-        text={text}
-        size={size}
-        colour={colour}
-        icon="arrowRight"
-        iconStart={false}
-      />
+      <IconButton text={text} iconEnd={iconEnd} fill={fill} size={size} />
     </div>
   ),
 };
