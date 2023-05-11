@@ -30,7 +30,8 @@
   "include": [
     "src/components/**/*.ts",
     "src/components/**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "src/pages/finance/Plan.stories.tsx"
   ],
   "exclude": [
     "node_modules",
