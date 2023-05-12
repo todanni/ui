@@ -8,7 +8,7 @@ const icon = cva('', {
       default: ['dark:text-white', 'text-grey-5'],
       green: ['dark:text-green-4 ', 'text-green-500/80'],
       red: ['dark:text-red-600', 'text-red-500/80'],
-      blue: ['dark:text-blue-700', ' text-blue-500/80'],
+      blue: ['dark:text-blue-500', ' text-blue-500/80'],
       yellow: ['dark:text-spend-3', 'text-spend-5/80'],
       white: ['text-white dark:text-white'],
     },
