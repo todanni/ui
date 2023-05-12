@@ -17,9 +17,9 @@ export const CardHeader = ({
   return (
     <div className="flex items-center gap-2">
       <Icon object={icon} size="xs" />
-      <h1 className="text-md whitespace-nowrap font-bold text-white sm:text-xl">
+      <h3 className="text-md whitespace-nowrap font-bold text-white sm:text-xl">
         {title}
-      </h1>
+      </h3>
       {button && (
         <Icon
           object={button}

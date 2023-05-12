@@ -52,7 +52,7 @@ export const TabButton = ({
       {...props}
     >
       <Icon object={icon} size="xs" colour={selected ? 'white' : fill} />
-      <p
+      <h2
         className={
           selected
             ? 'hidden font-bold text-white md:block'
@@ -60,7 +60,7 @@ export const TabButton = ({
         }
       >
         {text}
-      </p>
+      </h2>
     </div>
   );
 };

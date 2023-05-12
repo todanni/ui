@@ -16,15 +16,15 @@ export const CardFooter = ({
 }: CardFooterProps) => {
   return (
     <div className="flex items-center justify-between gap-2">
-      <h1 className="whitespace-nowrap text-sm font-semibold text-white sm:text-xl">
+      <p className="whitespace-nowrap text-sm font-semibold text-white sm:text-xl">
         {textStart}
-      </h1>
+      </p>
 
       <div className="flex gap-2">
         {textEnd && (
-          <h1 className="whitespace-nowrap text-sm font-semibold text-white sm:text-xl">
+          <p className="whitespace-nowrap text-sm font-semibold text-white sm:text-xl">
             {textEnd}
-          </h1>
+          </p>
         )}
         {button && (
           <Icon

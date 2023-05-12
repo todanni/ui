@@ -13,8 +13,8 @@ const DescriptionSection = ({ title, subtitle, description }: SectionProps) => {
       <Title size="large" intent="primary">
         {title}
       </Title>
-      <Heading size="medium">{subtitle}</Heading>
-      <Heading size="small">{description}</Heading>
+      <Heading size="md">{subtitle}</Heading>
+      <Heading size="sm">{description}</Heading>
     </div>
   );
 };

@@ -12,21 +12,19 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Headings: Story = {
-  args: {},
-  render: () => (
+  args: {
+    className: 'text-xl font-bold',
+  },
+  render: ({ className }) => (
     <div>
-      <Heading size="xlarge" colour="savings">
+      <Heading size="lg" colour="default" className={className}>
         Budget section
       </Heading>
-      <Heading size="large" colour="savings">
+      <Heading size="md" colour="green">
         Start by creating a budget
       </Heading>
-      <Heading size="medium" colour="default">
+      <Heading size="sm" colour="yellow">
         Use the budget tool to visualise your obligatory spending
-      </Heading>
-      <Heading size="small" colour="default">
-        The first step of taking control of your finances is to understand where
-        your money is going every month.
       </Heading>
     </div>
   ),

@@ -11,4 +11,5 @@ export * from './inputs';
 export * from './layout';
 export * from './logos';
 export * from './navigation';
+export * from './progress';
 export * from './typography';
