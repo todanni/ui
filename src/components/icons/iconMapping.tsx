@@ -115,7 +115,7 @@ export const iconMap = {
   goal: (
     <path
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
       d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
     />
   ),
@@ -157,14 +157,14 @@ export const iconMap = {
   expand: (
     <path
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
       d="M19.5 8.25l-7.5 7.5-7.5-7.5"
     />
   ),
   collapse: (
     <path
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
       d="M4.5 15.75l7.5-7.5 7.5 7.5"
     />
   ),
@@ -185,7 +185,7 @@ export const iconMap = {
   adjust: (
     <path
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
       d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"
     />
   ),
@@ -227,42 +227,42 @@ export const iconMap = {
   delete: (
     <path
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
       d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m6 4.125l2.25 2.25m0 0l2.25 2.25M12 13.875l2.25-2.25M12 13.875l-2.25 2.25M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
     />
   ),
   import: (
     <path
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
       d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m6.75 12l-3-3m0 0l-3 3m3-3v6m-1.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
     />
   ),
   summary: (
     <path
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
       d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"
     />
   ),
   idea: (
     <path
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
       d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
     />
   ),
   help: (
     <path
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
       d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
     />
   ),
   assets: (
     <path
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
       d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"
     />
   ),
@@ -283,14 +283,14 @@ export const iconMap = {
   add: (
     <path
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
       d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
     />
   ),
   subtract: (
     <path
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
       d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
     />
   ),

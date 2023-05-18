@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode, forwardRef } from 'react';
 
 type InputProps = React.DetailedHTMLProps<
   React.InputHTMLAttributes<HTMLInputElement>,
@@ -9,16 +9,17 @@ type InputProps = React.DetailedHTMLProps<
   helpText?: string;
 };
 
-const TextInput = React.forwardRef<HTMLInputElement, InputProps>(
+const NumberInput = React.forwardRef<HTMLInputElement, InputProps>(
   ({ label, id, helpText, ...props }, ref) => (
     <>
-      <label htmlFor={id} className="block text-grey-5 dark:text-white">
+      <label htmlFor={id} className="block text-white">
         {label}
       </label>
       <input
         className="rounded-lg p-2 text-sm text-gray-800"
-        type="text"
+        type="number"
         autoComplete="off"
+        step="0.01"
         ref={ref}
         id={id}
         {...props}
@@ -28,12 +29,13 @@ const TextInput = React.forwardRef<HTMLInputElement, InputProps>(
       )}
       {!helpText && (
         <p className="invisible p-1 font-light italic text-white/50">
-          Some text that is invisible
+          No errors
         </p>
       )}
     </>
   )
 );
 
-TextInput.displayName = 'TextInput';
-export { TextInput };
+NumberInput.displayName = 'NumberInput';
+
+export { NumberInput };
