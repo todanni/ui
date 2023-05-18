@@ -13,12 +13,13 @@ type Story = StoryObj<typeof meta>;
 
 export const Currency: Story = {
   args: {
-    label: 'Enter your monthly income',
+    label: 'Amount',
+    id: 'amount',
   },
-  render: ({ label }) => {
+  render: ({ label, id }) => {
     return (
       <div className="w-1/2">
-        <CurrencyInput label={label}></CurrencyInput>
+        <CurrencyInput label={label} id={id} />
       </div>
     );
   },
