@@ -7,16 +7,13 @@ export interface CurrencyInputProps
 
 const CurrencyInput = ({ mRef, label, ...props }: CurrencyInputProps) => {
   return (
-    <div className="flex flex-col gap-2">
-      <label className="text-white">{label}</label>
-      <input
-        className="rounded-lg p-2 text-sm text-gray-800"
-        type="number"
-        step="0.01"
-        {...props}
-        ref={mRef}
-      />
-    </div>
+    <input
+      className="rounded-lg p-2 text-sm text-gray-800"
+      type="number"
+      step="0.01"
+      {...props}
+      ref={mRef}
+    />
   );
 };
 
