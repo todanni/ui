@@ -1,11 +1,5 @@
 import React, { ReactNode, forwardRef } from 'react';
-
-export type CurrencyInputProps = {
-  label: string;
-  mRef?: React.Ref<HTMLInputElement> | null;
-};
-
-export interface TextInputProps
+export interface CurrencyInputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string;
   mRef?: React.Ref<HTMLInputElement> | null;
