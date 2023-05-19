@@ -51,7 +51,7 @@ const FooterLinks: React.FC = () => {
   return (
     <div className="hidden flex-row justify-around gap-10 sm:flex">
       {footerLinks.map((footerlink) => (
-        <div key={footerlink.title} className={`flex flex-col`}>
+        <div key={footerlink.title} className="flex flex-col">
           <h4 className="font-medium text-grey-5 dark:text-white">
             {footerlink.title}
           </h4>
