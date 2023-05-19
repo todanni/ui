@@ -1,33 +1,35 @@
 import React from 'react';
-import { cva, type VariantProps } from 'class-variance-authority';
 
-const select = cva(
-  'block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-td-gry-5',
-  {
-    variants: {},
-    defaultVariants: {},
-  }
-);
-
-type SelectOptions = {
-  name: string;
-  value: any;
+type Option = {
+  label: React.ReactNode;
+  value: string | number | string[];
 };
 
-export interface SelectProps
-  extends React.SelectHTMLAttributes<HTMLSelectElement>,
-    VariantProps<typeof select> {
-  options: SelectOptions[];
-}
+type SelectProps = React.DetailedHTMLProps<
+  React.SelectHTMLAttributes<HTMLSelectElement>,
+  HTMLSelectElement
+> & { options: Option[]; label: string; id: string };
 
-const Select: React.FC<SelectProps> = ({ className, options, ...props }) => (
-  <select className={select({ className })} {...props}>
-    {options?.map((opt, index) => (
-      <option key={index} value={opt.value}>
-        {opt.name}
-      </option>
-    ))}
-  </select>
+const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
+  ({ options, label, id, ...props }, ref) => (
+    <>
+      <label htmlFor={id} className="block text-grey-5 dark:text-white">
+        {label}
+      </label>
+      <select
+        ref={ref}
+        className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-grey-5"
+        {...props}
+      >
+        {options.map(({ label, value }, index) => (
+          <option key={index} value={value}>
+            {label}
+          </option>
+        ))}
+      </select>
+    </>
+  )
 );
+Select.displayName = 'Select';
 
 export { Select };

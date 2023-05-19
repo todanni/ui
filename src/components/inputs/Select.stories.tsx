@@ -13,20 +13,22 @@ type Story = StoryObj<typeof meta>;
 
 export const Selects: Story = {
   args: {
+    label: 'Select some option',
+    id: 'select',
     options: [
       {
-        name: 'Option 1',
+        label: 'Option 1',
         value: 'option-1',
       },
       {
-        name: 'Option 2',
+        label: 'Option 2',
         value: 'option-2',
       },
     ],
   },
-  render: ({ options }) => (
-    <div className="w-1/2">
-      <Select options={options}></Select>
+  render: ({ options, label, id }) => (
+    <div className="flex w-1/2 flex-col gap-2">
+      <Select options={options} label={label} id={id} />
     </div>
   ),
 };
