@@ -29,11 +29,6 @@ const NumberInput = React.forwardRef<HTMLInputElement, InputProps>(
       {helpText && (
         <p className="p-1 font-light italic text-white/50">{helpText}</p>
       )}
-      {!helpText && (
-        <p className="invisible p-1 font-light italic text-white/50">
-          No errors
-        </p>
-      )}
     </>
   )
 );
