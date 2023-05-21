@@ -4,17 +4,19 @@ type InputProps = React.DetailedHTMLProps<
   React.InputHTMLAttributes<HTMLInputElement>,
   HTMLInputElement
 > & {
-  label: string;
   id: string;
+  label?: string;
   helpText?: string;
 };
 
 const TextInput = React.forwardRef<HTMLInputElement, InputProps>(
   ({ label, id, helpText, ...props }, ref) => (
     <>
-      <label htmlFor={id} className="block text-grey-5 dark:text-white">
-        {label}
-      </label>
+      {label && (
+        <label htmlFor={id} className="block text-grey-5 dark:text-white">
+          {label}
+        </label>
+      )}
       <input
         className="rounded-lg p-2 text-sm text-gray-800"
         type="text"
@@ -24,12 +26,7 @@ const TextInput = React.forwardRef<HTMLInputElement, InputProps>(
         {...props}
       />
       {helpText && (
-        <p className="p-1 font-light italic text-white/50">{helpText}</p>
-      )}
-      {!helpText && (
-        <p className="invisible p-1 font-light italic text-white/50">
-          Some text that is invisible
-        </p>
+        <p className="font-light italic text-white/50">{helpText}</p>
       )}
     </>
   )
