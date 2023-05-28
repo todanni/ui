@@ -3,7 +3,7 @@ import React from 'react';
 import { ProgressBar } from './ProgressBar';
 
 const meta = {
-  title: 'Components/Progress',
+  title: 'Components/ProgressBar',
   component: ProgressBar,
 } satisfies Meta<typeof ProgressBar>;
 
@@ -11,12 +11,32 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Bar: Story = {
+export const WithoutPercentage: Story = {
   args: {
     fill: 'blue',
     progress: 45,
+    withPercentage: false,
   },
-  render: ({ fill, progress }) => (
-    <ProgressBar fill={fill} progress={progress} />
+  render: ({ fill, progress, withPercentage }) => (
+    <ProgressBar
+      fill={fill}
+      progress={progress}
+      withPercentage={withPercentage}
+    />
+  ),
+};
+
+export const WithPercentage: Story = {
+  args: {
+    fill: 'blue',
+    progress: 45,
+    withPercentage: true,
+  },
+  render: ({ fill, progress, withPercentage }) => (
+    <ProgressBar
+      fill={fill}
+      progress={progress}
+      withPercentage={withPercentage}
+    />
   ),
 };
