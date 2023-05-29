@@ -34,8 +34,6 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
   withPercentage,
   ...props
 }) => {
-  console.log(withPercentage);
-
   if (!withPercentage) {
     return (
       <div className="h-2.5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
@@ -48,6 +46,7 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
   }
   return (
     <WithPercentage
+      fill={fill}
       progress={progress}
       withPercentage={withPercentage}
       percentage={'default'}

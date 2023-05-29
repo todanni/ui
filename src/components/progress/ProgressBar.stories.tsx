@@ -28,7 +28,7 @@ export const WithoutPercentage: Story = {
 
 export const WithPercentage: Story = {
   args: {
-    fill: 'blue',
+    fill: 'green',
     progress: 45,
     withPercentage: true,
   },
